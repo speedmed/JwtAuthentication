@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 /**
  * @author Med
- * 19 mai 2017
+ * 3 sept. 2018
  */
 @Entity
 @Table(name="roles")

@@ -4,29 +4,24 @@
 package com.jwtAuth.model;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Index;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 /**
  * @author Med
- * 20 oct. 2017
+ * 3 sept. 2018
  */
 @Entity
 @Table(name="users")
