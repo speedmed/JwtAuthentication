@@ -3,7 +3,8 @@ package com.jwtAuth.security.controller.dto;
 import java.io.Serializable;
 
 /**
- * Created by stephan on 20.03.16.
+ * @author Med
+ * 3 sept. 2018
  */
 public class  JwtAuthenticationRequest implements Serializable {
 

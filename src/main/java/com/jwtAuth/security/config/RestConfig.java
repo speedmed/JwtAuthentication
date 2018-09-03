@@ -10,7 +10,7 @@ import org.springframework.web.filter.CorsFilter;
  
 /**
  * @author Med
- * 14 févr. 2018
+ * 3 sept. 2018
  */
 @Configuration
 public class RestConfig {

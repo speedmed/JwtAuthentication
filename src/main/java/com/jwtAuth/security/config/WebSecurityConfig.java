@@ -20,6 +20,10 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import com.jwtAuth.security.filter.JwtAuthenticationEntryPoint;
 import com.jwtAuth.security.filter.JwtAuthenticationTokenFilter;
 
+/**
+ * @author Med
+ * 3 sept. 2018
+ */
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)

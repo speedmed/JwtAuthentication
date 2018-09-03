@@ -9,7 +9,7 @@ import com.jwtAuth.model.User;
 
 /**
  * @author Med
- * 03 sep. 2017
+ * 3 sept. 2018
  */
 public interface IUserRepository extends JpaRepository<User, Long> {
 

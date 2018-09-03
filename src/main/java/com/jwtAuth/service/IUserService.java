@@ -4,7 +4,7 @@ import com.jwtAuth.model.User;
 
 /**
  * @author Med
- * 03 sep. 2018
+ * 3 sept. 2018
  */
 public interface IUserService {
 	

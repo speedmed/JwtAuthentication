@@ -26,6 +26,10 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.SignatureException;
 import io.jsonwebtoken.UnsupportedJwtException;
 
+/**
+ * @author Med
+ * 3 sept. 2018
+ */
 @Component
 public class JwtUtilWithoutDbCheckImpl implements JwtUtil, Serializable {
 

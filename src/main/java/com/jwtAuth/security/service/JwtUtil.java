@@ -9,7 +9,10 @@ import com.jwtAuth.security.controller.dto.JwtAuthenticationResponse;
 
 import io.jsonwebtoken.Claims;
 
-
+/**
+ * @author Med
+ * 3 sept. 2018
+ */
 public interface JwtUtil {
 	
 	public String getIdFromToken(String token);
