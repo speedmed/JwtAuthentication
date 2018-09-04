@@ -31,9 +31,6 @@ public class JwtUser implements UserDetails {
         this.password = password;
         this.authorities = authorities;
         this.enabled = enabled;
-//        this.providerId = providerId;
-//        this.providerUserId = providerUserId;
-//        this.accessToken = accessToken;
     }
 
     @JsonIgnore

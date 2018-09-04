@@ -28,10 +28,7 @@ import com.jwtAuth.security.filter.JwtAuthenticationTokenFilter;
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
-	
-	@Value("${app.url}")
-    private String appUrl;
-	
+		
     @Autowired
     private JwtAuthenticationEntryPoint unauthorizedHandler;
 
@@ -84,18 +81,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         HttpMethod.OPTIONS
                 ).permitAll()
                 .antMatchers("/api/open/**").permitAll()
-                /*.antMatchers(HttpMethod.POST, "/grave").permitAll()*/
                 .anyRequest().authenticated();
 
         // Custom JWT based security filter
         httpSecurity
                 .addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
-             // apply the configuration from the socialConfigurer (adds the SocialAuthenticationFilter)
-//				.apply(socialConfigurer.userIdSource(userIdSource));
 
         // disable page caching
         httpSecurity.headers().cacheControl().disable();
     }
+    
     @Bean
     @Override
      public AuthenticationManager authenticationManagerBean() throws Exception {
