@@ -51,10 +51,16 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         if(response.getHeader("Access-Control-Allow-Methods") == null)
         	response.addHeader("Access-Control-Allow-Methods", "OPTIONS, GET, POST, PUT, DELETE");
         
-		String token = request.getHeader(this.tokenHeader);
+        String token;
+        
+        if(!request.getMethod().equals("OPTIONS")){
+        	token = request.getHeader(this.tokenHeader).substring(6);
+        }else{
+        	token = request.getHeader(this.tokenHeader);
+        }
 		
 		if (token != null && !token.equals("")) {
-
+			
 			if(jwtTokenUtil.isTokenExpired(token)){
 				response.setStatus(490);
 				return;
@@ -76,11 +82,8 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
 						SecurityContextHolder.getContext().setAuthentication(authentication);
 					}
 			}
-			chain.doFilter(request, response);
-			
-		}else{
-			chain.doFilter(request, response);
 		}
+		chain.doFilter(request, response);
 		
 	}
 

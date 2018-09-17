@@ -34,7 +34,7 @@ public class AuthenticatedUserController {
     @RequestMapping(value = "me", method = RequestMethod.GET)
     public ResponseEntity<String> getAuthenticatedUser(@RequestHeader(value= "${jwt.header}") String token) {
         
-    	Long userId = jwtTokenUtil.getUserIdFromToken(token);
+    	Long userId = jwtTokenUtil.getUserIdFromToken(token.substring(6));
     	User user = userService.read(userId);
         return ResponseEntity.ok(user.getUsername());
     }
