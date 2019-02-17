@@ -4,6 +4,9 @@ Stateless Authentication using JWT (JSON Web Token) with Spring Boot.
 # Explanation Link
 
 You will find the full explanation to implement the project on my Blog.
+
+http://www.ninjadevcorner.com/2018/09/stateless-authentication-jwt-secure-spring-boot-rest-api.html
+
 https://ninjadevcorner.blogspot.com/2018/09/stateless-authentication-jwt-secure-spring-boot-rest-api.html
 
 
